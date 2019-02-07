@@ -13,6 +13,8 @@
     <dubbo:protocol name="dubbo" port="20880"/>
     <!-- service implementation, as same as regular local bean -->
     <bean id="demoService" class="demo.DemoServiceImpl"/>
+    <bean id="sumService" class="demo.SumServiceImpl"/>
     <!-- declare the service interface to be exported -->
     <dubbo:service interface="demo.DemoService" ref="demoService"/>
+    <dubbo:service interface="demo.SumService" ref="sumService"/>
 </beans>
